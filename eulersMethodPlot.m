@@ -12,9 +12,9 @@ Define equation under function
 %}
 
 x = 0;
-endPoint = 1;
-h = 0.000001;
-y = .5;
+endPoint = 100;
+h = 0.0001;
+y = 10;
 n = ((endPoint-x)/h)+1;
 
 
@@ -43,13 +43,13 @@ plot(X,Y,'r',X,Yexact,'g')
 
 function yPrime = equation(x,y)
     
-    yPrime = y - x;
+    yPrime = x*x + y;
 
 end
 
 function Yexact = exactSolution(x)
     
-    Yexact = (x+1) + ( (-1/2).*exp(x) );
+    Yexact = -(x.*x)+(2.*x)+3*(exp(x))-2;
 
 end
 
